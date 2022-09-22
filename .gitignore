@@ -102,3 +102,18 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Addon setting ---
+
+# Misc 
+.DS_Store
+
+# Workspace
+.temp
+
+# Contracts -----
+coverage.json
+cache
+artifacts
+typechain-types
+localhost

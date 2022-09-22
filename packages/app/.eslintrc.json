@@ -1,0 +1,3 @@
+{
+  "extends": ["@chocomintapp/eslint-config-base", "next/core-web-vitals"]
+}
