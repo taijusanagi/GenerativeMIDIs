@@ -1,1 +1,1 @@
-# Generative Onchain Music
+# SolSounds
