@@ -2,6 +2,13 @@
 # yarn lockfile v1
 
 
+"@a16z/contracts@^0.0.8":
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/@a16z/contracts/-/contracts-0.0.8.tgz#91da2191c18432fffb148e3f2bd9e5579fd56f0f"
+  integrity sha512-jG+sZxH/xFQw8PFjLcNOZVUd2IKzAExfV3AH8uaxxG01BAyvSrOKhlEYDUK9j/eqJ4Mqwt+FWlcdxvD3DRmHyQ==
+  dependencies:
+    "@openzeppelin/contracts" "^4.7.2"
+
 "@apollo/client@^3.6.9", "@apollo/client@latest":
   version "3.6.9"
   resolved "https://registry.yarnpkg.com/@apollo/client/-/client-3.6.9.tgz#ad0ee2e3a3c92dbed4acd6917b6158a492739d94"
@@ -2184,7 +2191,7 @@
     table "^6.8.0"
     undici "^5.4.0"
 
-"@openzeppelin/contracts@^4.7.3":
+"@openzeppelin/contracts@4.7.3", "@openzeppelin/contracts@^4.7.2":
   version "4.7.3"
   resolved "https://registry.yarnpkg.com/@openzeppelin/contracts/-/contracts-4.7.3.tgz#939534757a81f8d69cc854c7692805684ff3111e"
   integrity sha512-dGRS0agJzu8ybo44pCIf3xBaPQN/65AIXNgK8+4gzKd5kbvlqyxryUYVLJv7fK98Seyd2hDZzVEHSWAh0Bt1Yw==

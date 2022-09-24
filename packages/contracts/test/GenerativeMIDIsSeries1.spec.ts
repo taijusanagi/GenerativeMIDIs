@@ -3,6 +3,8 @@ import { expect } from "chai";
 import { ethers } from "hardhat";
 import MidiWriter, { Pitch } from "midi-writer-js";
 
+// TODO: add interface test
+
 const basePitchSequence: Pitch[] = [
   "A0",
   "A#0",

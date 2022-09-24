@@ -3,11 +3,12 @@ pragma solidity ^0.8.0;
 
 import "hardhat/console.sol";
 
-import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-import "@openzeppelin/contracts/utils/Base64.sol";
-import "@openzeppelin/contracts/utils/Strings.sol";
+import {LicenseVersion, CantBeEvil} from "@a16z/contracts/licenses/CantBeEvil.sol";
+import {ERC721, ERC721Enumerable} from "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
+import {Base64} from "@openzeppelin/contracts/utils/Base64.sol";
+import {Strings} from "@openzeppelin/contracts/utils/Strings.sol";
 
-contract GenerativeMIDIsSeries1 is ERC721 {
+contract GenerativeMIDIsSeries1 is ERC721Enumerable, CantBeEvil(LicenseVersion.CBE_CC0) {
   string public constant description = "description";
   string public constant image = "image";
   string public constant player = "player";
@@ -85,5 +86,15 @@ contract GenerativeMIDIsSeries1 is ERC721 {
   function tokenURI(uint256 tokenId) public view override returns (string memory) {
     string memory metadata = getMetadata(tokenId);
     return string(abi.encodePacked("data:application/json;base64,", Base64.encode(bytes(metadata))));
+  }
+
+  function supportsInterface(bytes4 interfaceId)
+    public
+    view
+    virtual
+    override(ERC721Enumerable, CantBeEvil)
+    returns (bool)
+  {
+    return super.supportsInterface(interfaceId);
   }
 }

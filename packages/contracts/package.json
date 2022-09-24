@@ -47,6 +47,7 @@
     "typechain": "^8.1.0"
   },
   "dependencies": {
+    "@a16z/contracts": "^0.0.8",
     "@openzeppelin/contracts": "4.7.3"
   }
 }
