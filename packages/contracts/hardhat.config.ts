@@ -7,7 +7,7 @@ import { HardhatUserConfig } from "hardhat/config";
 
 dotenv.config();
 
-const url = "https://polygon-rpc.com/";
+const url = "https://matic-mumbai.chainstacklabs.com";
 
 export const accounts = process.env.DEPLOYER_PRIVATE_KEY !== undefined ? [process.env.DEPLOYER_PRIVATE_KEY] : [];
 
@@ -22,10 +22,15 @@ const config: HardhatUserConfig = {
     },
   },
   networks: {
-    polygon: {
-      chainId: 137,
+    mumbai: {
+      chainId: 80001,
       url,
       accounts,
+    },
+  },
+  etherscan: {
+    apiKey: {
+      polygonMumbai: process.env.ETHERSCAN_API_KEY || "",
     },
   },
 };

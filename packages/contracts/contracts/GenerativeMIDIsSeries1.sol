@@ -9,9 +9,11 @@ import {Base64} from "@openzeppelin/contracts/utils/Base64.sol";
 import {Strings} from "@openzeppelin/contracts/utils/Strings.sol";
 
 contract GenerativeMIDIsSeries1 is ERC721Enumerable, CantBeEvil(LicenseVersion.CBE_CC0) {
-  string public constant description = "description";
-  string public constant image = "image";
-  string public constant player = "player";
+  string public constant description = "GenerativeMIDIs is a project which generates MIDI data fully on-chain.";
+  string public constant image =
+    "https://bafkreigptjglyqcn6zmwf2nymcygzbkwjn4b6iqnkicktfilac3aqignee.ipfs.nftstorage.link/";
+  string public constant player =
+    "https://bafkreigptjglyqcn6zmwf2nymcygzbkwjn4b6iqnkicktfilac3aqignee.ipfs.nftstorage.link/";
 
   constructor() ERC721("GenerativeMIDIsSeries1", "GMIDIS1") {}
 
